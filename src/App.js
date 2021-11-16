@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import Student from './components/Student/student';
+
 import './App.css';
 
 function App(props) {
@@ -64,7 +67,15 @@ function App(props) {
   ])
   return (
     <div>
-      Test
+      {student.map((person)=>
+      <Student
+      key={person.id}
+      person={person}
+      
+      />
+
+      )}
+      
     </div>
     
   );
@@ -72,4 +83,3 @@ function App(props) {
 
 export default App;
 
-// props.students.scores.map
